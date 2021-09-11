@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Super Map</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    
+    <input
+    id="pac-input"
+    class="controls"
+    type="text"
+    placeholder="Search Box"
+    />
+
+    <div id="buttons">
+      <a href="/mapOne"><button type="button">Map</button></a>
+      <a href="/mapTwo"><button type="button">Arctic</button></a>
+      <a href="/batMap"><button type="button">Batman</button></a>
+      <a href="/"><button type="button">Superstar</button></a> 
+      <a href="/mushroomMap"><button type="button">Mushroom</button></a>  
+      <a href="/yoshiMap"><button type="button">Yoshi</button></a>   
+  </div>
+
+  <h1 class="hello">Mushroom Map</h1>
+  <div id="mushroomMap"></div>
+  <div class="icon">
+    <a href='/'>
+      <img src="star.png"
+        width="50"
+        height="30"
+        ></img>
+    </a>
+    <a href='/mushroomMap'>
+      <img src="mushroom.png"
+        width="50"
+        height="30"
+        ></img>    
+    </a>
+    <a href='/yoshiMap'>
+      <img src="mariyoshi.png"
+        width="50"
+        height="30"
+        ></img>
+    </a>
+  </div>
+
+
+    
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script src="index.js"></script>
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=PLACES_API_KEY&callback=initAutocompleteMush&libraries=places&v=weekly"
+    async
+  ></script>
+
+  </body>
+</html>
